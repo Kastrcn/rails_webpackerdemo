@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>rails_webpackerdemo</title>
+        <%= csrf_meta_tags %>
+        <%= csp_meta_tag %>
+        <%= javascript_pack_tag 'application' %>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+
+    <body>
+        <%= javascript_pack_tag 'hello_erb' %>
+        <%= javascript_pack_tag 'hello_react' %>
+        <%= javascript_pack_tag 'hello_vue' %>
+        <hello-angular>Loading...</hello-angular>
+        <%= javascript_pack_tag 'hello_angular' %>
+        <div data-controller="hello">
+            <h1 data-target="hello.output"></h1>
+        </div>
+        <% yield %>
+    </body>
+</html>
